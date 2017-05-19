@@ -1,0 +1,47 @@
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+ul{
+	list-style-type: none;
+	padding: 0;
+}
+body{
+	background: url(../img/timg.jpg) center top fixed;
+	color: #fff;
+}
+header a img {
+	width: 80px;
+	height: auto;
+}
+header{
+	max-width: 1200px;
+	margin:30px auto;
+}
+header ul{
+	float: left;
+	margin: 20px 30px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+header ul li{
+	float: left;
+	margin: 40px 50px;
+}
+header ul li a{
+	text-decoration: none;
+	color: #fff;
+	padding: 20px;
+	border: 1px solid transparent;
+	transition: color .5s,border .5s;
+}
+header ul li a:hover{
+	color: #000;
+	border: 1px solid #fff;
+}
+header h2{
+	font-size: 30px;
+}
+
