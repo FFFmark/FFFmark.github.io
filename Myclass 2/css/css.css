@@ -85,6 +85,9 @@ section figure figcaption{
 	opacity: 0;
 	transition: opacity .5s;
 }
+section figure figcaption:hover{
+	opacity: 1;
+}
 section figure img{
 	width: 100%;
 	height: auto;
