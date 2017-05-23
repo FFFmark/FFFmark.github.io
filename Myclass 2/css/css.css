@@ -68,7 +68,10 @@ section figure {
 	float: left;
 	width: 30%;
 	overflow: hidden;
-	margin: 40px calc(10% / 2 ) 40px 0px;
+	margin: calc(10% / 6) calc(10% / 2) 0 0;
+}
+figure:nth-child(3n){
+	margin-right: 0px;
 }
 section figure img{
 	width: 100%;
