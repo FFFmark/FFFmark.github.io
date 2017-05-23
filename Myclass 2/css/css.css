@@ -74,6 +74,8 @@ figure:nth-child(3n){
 	margin-right: 0px;
 }
 section figure figcaption{
+	width: 80px;
+	height: 30px;
 	position: absolute;
 	z-index: 3;
 	margin: auto;
