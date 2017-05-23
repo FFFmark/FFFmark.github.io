@@ -69,6 +69,7 @@ section figure {
 	width: 30%;
 	overflow: hidden;
 	margin: calc(10% / 6) calc(10% / 2) 0 0;
+	position: relative;
 }
 figure:nth-child(3n){
 	margin-right: 0px;
