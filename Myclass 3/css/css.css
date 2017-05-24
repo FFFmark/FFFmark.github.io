@@ -1,0 +1,150 @@
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+ul{
+	list-style-type: none;
+	padding: 0;
+}
+body{
+	background: url(../img/timg.jpg) center top fixed;
+	color: #fff;
+}
+header a img {
+	width: 80px;
+	height: auto;
+}
+header{
+	max-width: 1200px;
+	margin:30px auto;
+}
+header ul{
+	float: left;
+	margin: 20px 30px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+header ul li{
+	float: left;
+	margin: 40px 50px;
+}
+header ul li a{
+	text-decoration: none;
+	color: #fff;
+	padding: 20px;
+	border: 1px solid transparent;
+	transition: color .5s,border .5s;
+}
+header ul li a:hover{
+	color: #000;
+	border: 1px solid #fff;
+}
+header h2{
+	font-size: 30px;
+}
+main{
+	max-width: 1200px;
+	margin:30px auto;
+}
+main ul li{
+	float: left;
+	margin: 40px 40px 40px 0px;
+	background-color: rgba(90,60,100,.5);
+	padding: 20px 50px;	
+	transition: background-color .5s;
+	border-radius: 10px;
+}
+main ul li:hover{
+	background-color: rgba(90,60,250,.5);
+	border-radius: 0px;
+}
+
+section{
+	max-width: 1200px;
+	margin:30px auto;
+}
+section figure {
+	float: left;
+	width: 30%;
+	overflow: hidden;
+	margin: calc(10% / 6) calc(10% / 2) 0 0;
+	position: relative;
+}
+figure:nth-child(3n){
+	margin-right: 0px;
+}
+section figure figcaption{
+	width: 80px;
+	height: 30px;
+	padding:80px 30px ;
+	position: absolute;
+	z-index: 3;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	text-align: center;
+	opacity: 0;
+	transition: opacity .5s;
+}
+section figure figcaption:hover{
+	opacity: 1;
+}
+section figure img{
+	width: 100%;
+	height: auto;
+	-webkit-filter: grayscale(.5);
+	transition: webkit-filter .5s;
+	cursor: pointer;
+}
+figure:hover img{
+	-webkit-filter: grayscale(0);
+}
+
+.eml dt{
+	width: 100px;
+	height: auto;
+	padding: 10px 30px;
+	background: #fff;
+	color: #000000;
+	text-align: center;
+	display: inline-block;
+	border-radius: 5px;
+}
+.eml dd{
+	padding: 10px 30px;
+	display: inline-block;
+	margin: 0;
+	background: #000000;
+}
+.eml input{
+	width: 30%;
+	height: 40px;
+	margin: 10px 3% 10px 0px;
+	border-radius: 5px;
+	outline: none;
+	border: none;
+}
+.eml select{
+	width: 30%;
+	height: 42px;
+	margin: 10px 0px 10px 0px;
+	border-radius: 5px;
+	outline: none;
+	border: none;
+	color: #999;
+}
+.eml textarea{
+	width: 40%;
+	height: auto;
+}
+.eml input[type="submit"]{
+	margin: 0px 0px 0px 10px;
+}
+.eml textarea,
+.eml input[type="submit"]{
+	vertical-align: top;
+}
