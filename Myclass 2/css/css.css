@@ -71,7 +71,7 @@ section figure {
 	margin: calc(10% / 6) calc(10% / 2) 0 0;
 	position: relative;
 }
-figure:nth-child(3n){
+figure:nth-child(3n+1){
 	margin-right: 0px;
 }
 section figure figcaption{
