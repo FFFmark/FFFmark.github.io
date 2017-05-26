@@ -76,7 +76,7 @@ section figure:nth-child(3n+1){
 	margin-right: 0;
 }
 section figure figcaption{
-	width:100%;
+	width:80px;
 	height: 30px;
 	padding:80px 30px ;
 	position: absolute;
