@@ -1,0 +1,87 @@
+body{
+	box-sizing: border-box;
+	min-height: 1400px;
+	margin: 0px;
+	padding: 0px;
+	color: #fff;
+	font: "微软雅黑";
+	
+}
+.clearfix::after{
+	clear: both;
+	display: table;
+	content: "";
+}
+ul{
+	margin-top: 20px;
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+	color: #fff;
+}
+.container{
+	max-width: 1200px;
+	margin: auto;
+}
+header{
+	width: 100%;
+	padding: 12px 0px;
+	background-color: rgba(0,0,0,.1);
+	position: fixed;
+	transition: padding .5s  background-color .5s;
+}
+header.on{
+	padding: 6px 0px;
+	background-color: rgba(0,0,0,.6);
+}
+header .logo{
+	float: left;
+}
+header .logo img{
+	display: inline-block;
+	vertical-align: middle;
+}
+header .topMenu{
+	float: right;
+}
+header .topMenu ul li{
+	float: left;
+	margin-right: 40px;
+}
+header .topMenu ul a{
+	transition: color .5s; 
+}
+header .topMenu ul a:hover{
+	color: #339BEB;
+}
+header .logo span{
+	font-size: 3em;
+	vertical-align: middle;
+	transition: color .5s;
+}
+header .logo span:hover{
+	color: #339BEB;
+}
+.banner{
+	min-height: 750px;
+	background: url(../img/banner.jpg) no-repeat center top;
+	background-size: cover;
+}
+.banner .containe span{
+	color: #339BEB;
+}
+.banner .containe{
+	width: 400px;
+	height: 180px;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.banner .containe h1{
+	text-align: center;
+}
+
