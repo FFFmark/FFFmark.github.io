@@ -1,0 +1,157 @@
+body{
+	box-sizing: border-box;
+	min-height: 1400px;
+	margin: 0px;
+	padding: 0px;
+	font: "微软雅黑";
+	
+}
+.clearfix::after{
+	clear: both;
+	display: table;
+	content: "";
+}
+ul{
+	margin-top: 20px;
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+	color: #fff;
+}
+.container{
+	max-width: 1200px;
+	margin: auto;
+}
+header{
+	width: 100%;
+	padding: 12px 0px;
+	background-color: rgba(0,0,0,.1);
+	position: fixed;
+	color: #fff;
+	transition: padding .5s  background-color .5s;
+}
+header.on{
+	padding: 6px 0px;
+	background-color: rgba(0,0,0,.6);
+}
+header .logo{
+	float: left;
+}
+header .logo img{
+	display: inline-block;
+	vertical-align: middle;
+}
+header .topMenu{
+	float: right;
+}
+header .topMenu ul li{
+	float: left;
+	margin-right: 40px;
+}
+header .topMenu ul a{
+	transition: color .5s; 
+}
+header .topMenu ul a:hover{
+	color: #339BEB;
+}
+header .logo span{
+	font-size: 3em;
+	vertical-align: middle;
+	transition: color .5s;
+}
+header .logo span:hover{
+	color: #339BEB;
+}
+.banner{
+	min-height: 750px;
+	background: url(../img/banner.jpg) no-repeat center top;
+	background-size: cover;
+}
+.banner .containe span{
+	color: #339BEB;
+}
+.banner .containe{
+	width: 400px;
+	height: 180px;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.banner .containe h1{
+	text-align: center;
+}
+.about .img{
+	float: left;
+	width: 48%;
+}
+.about .img img{
+	width: 100%;
+}
+.about .note{
+	float: right;
+	width: 48%;
+}
+.about h2{
+	text-align: center;
+}
+.about h2+p{
+	text-align: center;
+}
+.about .note p{
+	line-height: 2;
+	margin: 20px 0px;
+}
+.about .note p:first-child{
+	margin-top: 0px;
+}
+.about .note ol{
+	list-style: none;
+	line-height: 2;
+	padding: 0;
+	counter-reset: liCounter;
+}
+.about .note li{
+	counter-increment: liCounter;
+}
+.about .note li::before{
+	content: counter(liCounter);
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	text-align: center;
+	line-height: 20px;
+	border-radius: 20px;
+	border: 1px dashed #000;
+	margin-right: 10px;
+	transition: transform .5s;
+}
+.about .note li:hover::before{
+	transform: translate(10px) rotate(360deg);
+}
+
+.service{
+	background: url(../img/desktop.jpg) center center;
+	background-size: cover;
+}
+.service .container{
+	width: 1200px;
+	margin: auto;
+}
+.service h2{
+	display: inline-block;
+	margin: 60px;
+}
+.service h2+p{
+	text-align: center;
+}
+.service li{
+	width: 46%;
+	height: 140px;
+	float: left;
+	text-align: right;
+	margin: 40px 0;
+}
