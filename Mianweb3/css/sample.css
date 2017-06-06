@@ -148,10 +148,39 @@ header .logo span:hover{
 .service h2+p{
 	text-align: center;
 }
+
 .service li{
-	width: 46%;
-	height: 140px;
 	float: left;
+	width: 48%;
+	margin-right: 4%;
 	text-align: right;
-	margin: 40px 0;
+	cursor: pointer;
+}
+.service li::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.service li:nth-child(2n){
+	margin-right: 0px;
+	text-align: left;
+	
+}
+.service li i{
+	float: right;
+	padding: 12px 0px 12px 0px;
+	margin: 20px 0px 20px 0px;
+	transition: transform .5s,color .5s;
+}
+.service li:hover i{
+	transform: scale(1.2);
+	color: #339BEB;
+}
+.service li:nth-child(2n) i{
+	float: left;
+	padding: 12px 0px 12px 0px;
+}
+.service li h3{
+	display: inline-block;
+	margin: 25px;
 }
