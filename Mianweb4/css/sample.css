@@ -1,0 +1,228 @@
+body{
+	box-sizing: border-box;
+	min-height: 1400px;
+	margin: 0px;
+	padding: 0px;
+	font: "微软雅黑";
+	
+}
+.clearfix::after{
+	clear: both;
+	display: table;
+	content: "";
+}
+ul{
+	margin-top: 20px;
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+	color: #fff;
+}
+.container{
+	max-width: 1200px;
+	margin: auto;
+}
+header{
+	width: 100%;
+	padding: 12px 0px;
+	background-color: rgba(0,0,0,.1);
+	position: fixed;
+	color: #fff;
+	transition: padding .5s  background-color .5s;
+}
+header.on{
+	padding: 6px 0px;
+	background-color: rgba(0,0,0,.6);
+}
+header .logo{
+	float: left;
+}
+header .logo img{
+	display: inline-block;
+	vertical-align: middle;
+}
+header .topMenu{
+	float: right;
+}
+header .topMenu ul li{
+	float: left;
+	margin-right: 40px;
+}
+header .topMenu ul a{
+	transition: color .5s; 
+}
+header .topMenu ul a:hover{
+	color: #339BEB;
+}
+header .logo span{
+	font-size: 3em;
+	vertical-align: middle;
+	transition: color .5s;
+}
+header .logo span:hover{
+	color: #339BEB;
+}
+.banner{
+	min-height: 750px;
+	background: url(../img/banner.jpg) no-repeat center top;
+	background-size: cover;
+}
+.banner .containe span{
+	color: #339BEB;
+}
+.banner .containe{
+	width: 400px;
+	height: 180px;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.banner .containe h1{
+	text-align: center;
+}
+.about .img{
+	float: left;
+	width: 48%;
+}
+.about .img img{
+	width: 100%;
+}
+.about .note{
+	float: right;
+	width: 48%;
+}
+.about h2{
+	text-align: center;
+}
+.about h2+p{
+	text-align: center;
+}
+.about .note p{
+	line-height: 2;
+	margin: 20px 0px;
+}
+.about .note p:first-child{
+	margin-top: 0px;
+}
+.about .note ol{
+	list-style: none;
+	line-height: 2;
+	padding: 0;
+	counter-reset: liCounter;
+}
+.about .note li{
+	counter-increment: liCounter;
+}
+.about .note li::before{
+	content: counter(liCounter);
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	text-align: center;
+	line-height: 20px;
+	border-radius: 20px;
+	border: 1px dashed #000;
+	margin-right: 10px;
+	transition: transform .5s;
+}
+.about .note li:hover::before{
+	transform: translate(10px) rotate(360deg);
+}
+
+.service{
+	background: url(../img/desktop.jpg) center center;
+	background-size: cover;
+}
+.service .container{
+	width: 1200px;
+	margin: auto;
+}
+.service h2{
+	display: inline-block;
+	margin: 60px 0px 30px 540px;
+}
+.service h2+p{
+	text-align: center;
+}
+
+.service li{
+	float: left;
+	width: 48%;
+	margin-right: 4%;
+	text-align: right;
+	cursor: pointer;
+}
+.service li::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.service li:nth-child(2n){
+	margin-right: 0px;
+	text-align: left;
+	
+}
+.service li i{
+	float: right;
+	padding: 12px 0px 12px 0px;
+	margin: 20px 0px 20px 0px;
+	transition: transform .5s,color .5s;
+}
+.service li:hover i{
+	transform: scale(1.2);
+	color: #339BEB;
+}
+.service li:nth-child(2n) i{
+	float: left;
+	padding: 12px 0px 12px 0px;
+}
+.service li h3{
+	display: inline-block;
+	margin: 25px;
+}
+.case{
+	width: 1200px;
+	margin: auto;
+}
+.case .maincase h2,
+.case .maincase p{
+	text-align: center;
+}
+.case .maincase figure{
+	width: 22%;
+	float: left;
+	overflow: hidden;
+	margin: 20px calc(12% / 3) 0 0;
+	position: relative;
+}
+
+.case figure:nth-child(4n+2){
+	margin-right: 0 ;
+}
+.case .maincase figure img{
+	width: 100%;
+	height: auto;
+	transform: scale(1) rotate(0deg);
+	transition: transform .5s;
+}
+.case .maincase figure:hover img {
+	transform: scale(1.25) rotate(6deg);	
+}
+.case .maincase figcaption{
+	width: 90%;
+	height: auto;
+	top: 42%;
+	bottom: 4%;	
+	left: 5%;
+	right: 0;
+	position: absolute;
+	background: rgba(255,255,255, .5);
+}
+.case .maincase figcaption .data{
+	text-align: right;
+	background: rgba(100,100,100,.5[]);
+}
