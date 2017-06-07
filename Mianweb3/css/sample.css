@@ -143,8 +143,7 @@ header .logo span:hover{
 }
 .service h2{
 	display: inline-block;
-	display: table;
-	margin: 0px 60px;
+	margin: 60px 0px 30px 540px;
 }
 .service h2+p{
 	text-align: center;
