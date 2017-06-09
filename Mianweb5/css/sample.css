@@ -184,3 +184,85 @@ header .logo span:hover{
 	display: inline-block;
 	margin: 25px;
 }
+.case{
+	width: 1200px;
+	margin: auto;
+}
+.case .maincase h2,
+.case .maincase p{
+	text-align: center;
+}
+.case .maincase figure{
+	width: 22%;
+	float: left;
+	overflow: hidden;
+	margin: 20px calc(12% / 3) 0 0;
+	position: relative;
+}
+
+.case figure:nth-child(4n+2){
+	margin-right: 0 ;
+}
+.case .maincase figure img{
+	width: 100%;
+	height: auto;
+	transform: scale(1) rotate(0deg);
+	transition: transform .5s;
+}
+.case .maincase figure:hover img {
+	transform: scale(1.25) rotate(6deg);	
+}
+.case .maincase figcaption{
+	width: 90%;
+	height: auto;
+	top: 42%;
+	bottom: 4%;	
+	left: 5%;
+	right: 0;
+	position: absolute;
+	background: rgba(255,255,255, .5);
+}
+.case .maincase figcaption .data{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	text-align: right;
+	background: rgba(100,100,100,.5);
+}
+.case .maincase figcaption .time{
+	position: relative;
+	top: 25px;
+	background: #339BEB;
+	width: 20%;
+	text-align: center;
+}
+.case .maincase figcaption h3{
+	margin: 5px 0px 0px 70px;
+}
+.case .maincase figcaption p{
+	line-height: 1.5;
+}
+section.contact{
+	background: url(../img/lianxbj.jpg);
+}
+.contact .container{
+	width: 1200px;
+	margin: auto;
+	min-height: 600px;
+}
+.contact {
+	color: #fff;
+}
+.contact h2{
+	text-align: center;
+}
+.contact h2+p{
+	text-align: center;
+}
+.contact .left{
+	float: left;
+	width: 45%;
+}
+.contact ul{
+	padding: 0;
+}
