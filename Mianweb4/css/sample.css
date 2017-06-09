@@ -223,6 +223,22 @@ header .logo span:hover{
 	background: rgba(255,255,255, .5);
 }
 .case .maincase figcaption .data{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
 	text-align: right;
-	background: rgba(100,100,100,.5[]);
+	background: rgba(100,100,100,.5);
+}
+.case .maincase figcaption .time{
+	position: relative;
+	top: 25px;
+	background: #339BEB;
+	width: 20%;
+	text-align: center;
+}
+.case .maincase figcaption h3{
+	margin: 5px 0px 0px 70px;
+}
+.case .maincase figcaption p{
+	line-height: 1.5;
 }
