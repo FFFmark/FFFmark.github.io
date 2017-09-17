@@ -1,0 +1,11 @@
+body{
+	background:#339BEB;
+}
+header{
+	width: 1200px;
+	height: auto;
+}
+p{
+	padding-left: 3px;
+	text-align-last: center;
+}
