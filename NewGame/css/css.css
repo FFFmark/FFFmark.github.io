@@ -1,0 +1,42 @@
+.clearfix::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+body{
+	padding: 0;
+	margin: 0 auto;
+	width: 1200px;
+	height: auto;
+}
+div{
+	margin-top: 5px;
+}
+.Centre{
+	margin: 0 auto;
+	display: table;
+	margin-top: 20%;
+}
+.getGame{
+	width: 240px;
+}
+.getGame h2{
+	margin: 3px;
+	text-align: center;
+}
+input{
+	float: left;
+}
+input[type="number"]{
+	width: 130px;
+	height: 19px;
+}
+#Again{
+	display: none;
+}
+.History{
+	border: 1px solid rgba(0,0,0,.2);
+	border-bottom: none;
+	min-height: 100px;
+	border-top: none;
+}

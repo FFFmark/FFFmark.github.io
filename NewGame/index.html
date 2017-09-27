@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/css.css"/>
+	</head>
+	<body>
+		<div class="Centre">
+			<div class="getGame clearfix">
+				<h2>猜数字小游戏</h2>
+				<input type="number" name="Num" id="Num" min="0" max="10" value="" placeholder="0-10整数，6次机会" />
+				<input type="button" name="Confirm" id="Confirm" value="确定" />
+				<input type="button" name="Again" id="Again" value="重来" />
+			</div>
+			<div class="Put">
+				<div class="Residue">
+					剩余次数:
+					<span id="setResidue">6</span>
+					<br/>
+				</div>
+				<div class="History">
+					历史:
+					<br/>
+					<span id="setHistory"></span>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var ogetNum=document.getElementById("Num");
+			var oSpHistory=document.getElementById("setHistory");
+			var osetResidue=document.getElementById("setResidue");
+			var oListNum=6;
+			var oRm=Math.floor(Math.random()*10+1);//生成随机数
+			var oConfirm=document.getElementById("Confirm");//确定按钮
+			var	oAgain=document.getElementById("Again");//重来按钮
+			
+			oConfirm.addEventListener('click',confirm);
+			function confirm () {
+				if( oListNum-->0) {
+					if ( ogetNum.value > oRm ) {
+						oSpHistory.innerText+="大于\n";
+						osetResidue.innerText=oListNum;
+					}
+					if ( ogetNum.value < oRm ) {
+						oSpHistory.innerText+="小于\n";
+						osetResidue.innerText=oListNum;
+					}
+					if ( ogetNum.value == oRm ) {
+						oSpHistory.innerText+="等于\n";
+						alert("恭喜你答对了");
+						closeGame();
+					}
+				}
+				else{
+					alert("非正常情况");
+					closeGame();
+				}	
+				ogetNum.value="";
+			}
+			
+			function closeGame () {
+				ogetNum.disabled=true;
+				oConfirm.style.display="none";
+				oAgain.style.display="block";
+			}
+			
+			oAgain.onclick=function setAgain (){
+				ogetNum.disabled=false;
+				oConfirm.style.display="block";
+				oAgain.style.display="none";
+				oListNum=6;
+			}
+			
+		</script>
+	</body>
+</html>
