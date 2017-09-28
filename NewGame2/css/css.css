@@ -1,0 +1,38 @@
+body{
+	width: 1200px;
+	height: auto;
+	margin: 0 auto;
+}
+h2{
+	text-align: center;
+}
+div{
+	margin: 35px;
+}
+.first{
+	margin-top: 20px;
+}
+.gameone{
+	border: 1px solid #000;
+}
+input{
+	padding: 0;
+	margin-left: 20px;
+}
+input[type="text"]{
+	width: 180px;
+	height: 25px;
+}
+#btn{
+	width: 100px;
+	height: 40px;
+	display: block;
+	margin: 0 auto;
+}
+#btn2{
+	width: 100px;
+	height: 40px;
+	display: block;
+	margin: 0 auto;
+	display: none;	
+}
