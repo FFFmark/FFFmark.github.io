@@ -1,0 +1,44 @@
+body{
+	width: 1200px;
+	margin: 0 auto;
+}
+.clock{
+	background: url(../img/clock.jpg);
+	background-size: 100% 100%;
+	width: 220px;
+	height: 220px;
+	position: relative;
+}
+.house{
+	background: #000;
+	width: 4px;
+	height: 50px;
+	margin: 0;
+	left: 95px;
+	top: 65px;
+	transform-origin: top center;
+	transform: rotate();
+	position: absolute;
+}
+.minutes{
+	background: #000;
+	width: 3px;
+	height: 90px;
+	margin: 0;
+	left: 105px;
+	top: 200px;
+	transform-origin: top center;
+	transform: rotate();
+	position: absolute;
+}
+.second{
+	background: #f00;
+	width: 2px;
+	height: 100px;
+	margin: 0;
+	left: 110px;
+	top: 110px;
+	transform-origin: top center;
+	transform: rotate();
+	position: absolute;
+}
