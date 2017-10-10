@@ -6,23 +6,25 @@
 		<link rel="stylesheet" type="text/css" href="css/css.css"/>
 	</head>
 	<body>
-		
-		<div class="clock">
-			<div class="house" id="house"></div>
-			<div class="minutes" id="minutes"></div>
-			<div class="second" id="second"></div>
+		<div class="img">
+			<div class="clock">
+				<div class="house" id="house"></div>
+				<div class="minutes" id="minutes"></div>
+				<div class="second" id="second"></div>
+			</div>
 		</div>
+		
 		<script type="text/javascript">
 		var oHouse=document.getElementById("house")
 			oMinutes=document.getElementById("minutes")
 			oSecond=document.getElementById("second");
 			function run () {
 				var date= new Date();
-				var strHouse=(date.getHours()+date.getMinutes()/60)*30;
-				var strMinutes=date.getMinutes()+date.getSeconds()/60;
+				var strHouse=(date.getHours()+date.getMinutes()/60)*30+180;
+				var strMinutes=(date.getMinutes()+date.getSeconds()/60)*6+180;
 				oHouse.style.transform="rotate("+strHouse+"deg)";
-				oMinutes.style.transform="rotate("+strMinutes*6+"deg)";
-				oSecond.style.transform="rotate("+date.getSeconds()*6+"deg)";	
+				oMinutes.style.transform="rotate("+strMinutes+"deg)";
+				oSecond.style.transform="rotate("+(date.getSeconds()*6+180)+"deg)";	
 			}
 			run();
 			setInterval("run()",1000);
