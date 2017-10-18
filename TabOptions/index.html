@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			body{
+				text-align: center;
+			}
+			div{
+				width: 300px;
+				height: 150px;
+				margin: 0 auto;
+				display:none;
+				text-align: left;
+				color: white;
+			}
+		</style>
+
+	</head>
+	<body>
+		<input type="button" id="btn1" value="1" />
+		<input type="button" id="btn2" value="2" />
+		<input type="button" id="btn3" value="3" />
+		<input type="button" id="btn4" value="4" />
+		<input type="button" id="btn5" value="5" />
+		<input type="button" id="btn6" value="6" />
+		
+		<div id="div1">第1个按钮</div>
+		<div id="div2">第2个按钮</div>
+		<div id="div3">第3个按钮</div>
+		<div id="div4">第4个按钮</div>
+		<div id="div5">第5个按钮</div>
+		<div id="div6">第6个按钮</div>
+		<script type="text/javascript">
+			var oBtn=document.querySelectorAll("input");
+			var oDiv=document.querySelectorAll("div");			
+			var i;
+			oDiv[0].style.display="block";
+			for ( i=0;i<oBtn.length;i++ ) {
+				oBtn[i].addEventListener("click",xian(i));	
+				oDiv[i].style.backgroundColor="rgb("+i*10+","+i*20+","+i*30+")";
+			}
+			function  xian (e) {					
+				return function (e1){
+					var j=0;
+					for (;j<oBtn.length;j++) {
+						oDiv[j].style.display="none";			
+					}		
+					oDiv[e].style.display="block";
+					console.log("点击了第"+(e+1)+"个按钮！");
+				}				
+			}
+			
+		</script>
+
+	</body>
+</html>
