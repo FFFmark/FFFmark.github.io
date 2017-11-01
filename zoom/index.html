@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/css.css"/>
+	</head>
+	<body>
+		<div class="clearfix box">
+			<figure id="figure">
+				<img src="img/office.jpg" alt="" onmousemove="omouse()" onmouseout="out()"/>
+				<div class="mouse" id="mouse"></div>
+			</figure>
+		
+		</div>
+		<script type="text/javascript">
+			var oM=document.getElementById("mouse");
+			var oFigure=document.getElementById("figure");
+			var oImg=oFigure.querySelector("img");
+			oImg.addEventListener("load",function() {
+				ratio=oImg.naturalWidth/oImg.width;
+			});
+			function omouse () {
+				var oX=event.offsetX;
+				var oY=event.offsetY;
+				oM.style.display="block";
+				oM.style.left=oX+"px";
+				oM.style.top=oY+"px";
+				oM.style.backgroundPosition=(-ratio*oX+50)+"px "+(-ratio*oY+50)+"px";
+			};
+			function out () {
+				oM.style.display="none";
+			}
+			
+			
+		</script>
+	</body>
+</html>

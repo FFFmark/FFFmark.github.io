@@ -1,0 +1,39 @@
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+body{
+	width: 1200px;
+	margin: 0 auto;
+}
+.box{
+	width: 820px;
+	margin: 30px auto;
+}
+figure{
+	width: 400px;
+	height: 300px;
+	margin: 0;
+	margin-right: 100px;
+	position: relative;
+	float: left;
+	overflow: hidden;
+}
+figure img{
+	width: 100%;
+	height: 100%;
+}
+.mouse{
+	width: 200px;
+	height: 200px;
+	border: 1px solid #000;
+	margin: -100px;
+	position: absolute;
+	background: url(../img/office.jpg);
+	left: 0;
+	top: 0;
+	pointer-events: none;
+	display: none;
+	border-radius: 50%; 
+}
