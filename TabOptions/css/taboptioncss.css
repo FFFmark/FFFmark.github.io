@@ -45,6 +45,7 @@ a{
 	background: rgba(9,9,9,.3);
 	position: absolute;
 	left: 0px;
+	transition: left 1s; 
 }
 ul li{
 	width: 300px;

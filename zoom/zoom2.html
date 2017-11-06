@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/css2.css"/>
+	</head>
+	<body>
+		<img src="img/office.jpg" id="img1"/>
+		<img src="img/office.jpg"/>
+		<img src="img/office.jpg"/>
+		<img src="img/office.jpg"/>
+		<img src="img/office.jpg"/>
+		<img src="img/office.jpg"/>
+		<div class="mouse" id="mouse"></div>
+		
+		<script type="text/javascript">
+			var oImg=document.querySelectorAll("img");
+			var oI=document.getElementById("img1");
+			var oMouse=document.getElementById("mouse");
+			for (var i=0 ;i<oImg.length ;i++) {
+				oI.addEventListener("load",function() {
+					ratio=oI.naturalWidth/oI.width;
+				});
+				oImg[i].addEventListener("mousemove",function () {
+					var oX=event.clientX-50;
+			    	var oY=event.clientY-50;
+			    	var oxx=event.offsetX;
+			    	var oyy=event.offsetY;
+			    	oMouse.style.display="block";
+			    	oMouse.style.left=oX+"px";
+					oMouse.style.top=oY+"px";
+					oMouse.style.backgroundPosition=(-ratio*oxx+50)+"px "+(-ratio*oyy+50)+"px";
+			    	console.log(oX,oY);
+				});
+				oImg[i].addEventListener("mouseout",function () {
+					oMouse.style.display="none";
+				});
+			}
+		</script>
+		
+	</body>
+</html>
