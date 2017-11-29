@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/css.css"/>
+	</head>
+	<body>
+		<div class="container">
+			<p><a href="#" class="tooltip" data-content="top" data-direction="top">上</a></p>
+			<p><a href="#" class="tooltip" data-content="下" data-direction="bottom">下</a></p>
+			<p><a href="#" class="tooltip" data-content="left" data-direction="left">左</a></p>
+			<p><a href="#" class="tooltip" data-content="右" data-direction="right">右</a></p>
+		</div>
+		<script type="text/javascript">
+			(function () {
+				var tips=document.querySelectorAll(".tooltip");
+				if(tips.length==0){
+					return false;
+				}
+				for(var i=0;i<tips.length;i++){
+					var content=document.createElement("span");
+					var data=tips[i].hasAttribute('data-content')?tips[i].getAttribute('data-content'):"目前为空";
+					var dir=tips[i].hasAttribute("data-direction")?tips[i].getAttribute('data-direction'):tips[i].setAttribute('data-direction','top');
+                    content.innerHTML=data;
+                    tips[i].appendChild(content);
+                    tips[i].addEventListener("mouseover",function (event) {
+                    	var event=event||window.event;
+                    	var target=event.target||event.srcElement;
+                    	var targetspan=target.getElementsByTagName('span')[0];
+                    	targetspan.classList.add('show'); 
+                    });
+                     tips[i].addEventListener("mouseout",function (event) {
+                    	var event=event||window.event;
+                    	var target=event.target||event.srcElement;
+                    	var targetspan=target.getElementsByTagName('span')[0];
+                    	targetspan.classList.remove('show');
+                    });
+				}
+			})();
+			
+		</script>
+	</body>
+</html>
