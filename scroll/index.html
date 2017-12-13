@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.menuContainer{
+			border: 1px solid #333;
+			width: 400px;
+			padding: 2px 2px 2px 2px;
+	        margin-left: 38%;
+	        margin-top: 5%;
+	        text-align: center;
+		}
+		.menu{
+			padding: 0;
+			margin: 0;
+			overflow: hidden;
+		}
+		.menu li{
+			list-style-type: none;
+			font-size: 12px;
+			line-height: 18px;
+		}
+		.menu li a{
+			text-decoration: none;
+			color: #333;
+		}
+	</style>
+	<body>
+		<div class="menuContainer">
+			<ul class="menu">
+				<li><a href="index2.html">AAAA</a></li>
+				<li><a href="index2.html">BBBB</li>
+				<li><a href="index2.html">CCCC</li>
+				<li><a href="index2.html">DDDD</li>
+				<li><a href="index2.html">EEEE</li>
+				<li><a href="index2.html">FFFF</li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			var omenu=document.querySelector(".menu");
+			var omenuitem=document.querySelectorAll(".menu li");			
+			var itemheight=omenuitem[0].offsetHeight;
+			var n=2;
+			var totalheight=itemheight*n;
+			var runflag=true;
+			 for (var i=0;i<omenuitem.length;i++) {
+			 	omenuitem[i].innerHTML=(i+1)+"."+omenuitem[i].innerHTML;
+			 }
+			 omenu.style.height=totalheight+"px";
+			 omenu.innerHTML+=omenu.innerHTML;
+			omenu.addEventListener("mouseover",function() {
+			 	runflag=false;	
+			 });
+			omenu.addEventListener("mouseout",function() {
+			 	runflag=true;
+			});			 
+			 function run () {
+			 	var stop=runflag==false;
+			    if(!stop){
+			    omenu.scrollTop==omenu.scrollHeight/2?omenu.scrollTop=0:omenu.scrollTop++;
+			    }
+			    setTimeout(run,omenu.scrollTop%totalheight==0?1000:10);
+			 } 
+			 setTimeout(run,1000);
+		
+		</script>
+	</body>
+</html>
