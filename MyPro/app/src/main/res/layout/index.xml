@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        app:srcCompat="@drawable/imglogo"></ImageView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/yhlogo"
+            android:layout_gravity="center"/>
+        <EditText
+            android:id="@+id/yhm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="15"
+            android:textColor="#8B8B7A"
+            android:inputType="textPersonName"
+            android:text="请输入用户名/邮箱" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/mmlogo" />
+
+        <EditText
+            android:id="@+id/mm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="15"
+            android:inputType="textPassword"
+            android:text="" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/btnzc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_weight=".45"
+            android:text="立即注册" />
+        <Button
+            android:id="@+id/btndl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".45"
+            android:onClick="dlwcView"
+            android:text="登录" />
+    </LinearLayout>
+
+</LinearLayout>
