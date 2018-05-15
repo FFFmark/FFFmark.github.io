@@ -1,0 +1,43 @@
+.clearfix::after{
+	display: table;
+	clear: both;
+	content: "";
+}
+body{
+	width: 1200px;
+	height: auto;
+	margin: 0 auto;
+}
+.bg{
+	width: 1200px;
+	height: 730px;
+	margin: 0 auto;
+	margin-top: 30px;
+	background: url(../img/bg.jpg) no-repeat center 0px;
+	background-size:cover;
+}
+.headtable{
+	width: 260px;
+	float: left;
+	margin-left: 43%;
+	padding-top: 20px;
+}
+.instructions{
+	width: 260px;
+	float: right;
+}
+.instructions h3{
+	text-align: center;
+}
+.statement{
+	width: 260px;
+	float: right;
+}
+.gamerange{
+	width: 342px;
+	height: 362px;
+	float: left;
+	border: 1px solid #000;
+	margin-left: 35%;
+	margin-top: 10%;
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>打地鼠</title>
+		<link rel="stylesheet" type="text/css" href="css/css.css"/>
+	</head>
+	<body>
+		<div class="bg clearfix">
+			
+			<div class="headtable">
+				<table>
+					<tr>
+						<td>游戏时间：</td>
+						<td><input type="text" value="1" size="10" id="goTime"/>分钟</td>
+					</tr>
+					<tr>
+						<td>倒记时间：</td>
+						<td id="countdown"></td>
+					</tr>
+					<tr>
+						<td>地鼠出现间隔：</td>
+						<td><input type="text" value="1" size="10"/>秒钟</td>
+					</tr>
+					<tr>
+						<td>停留时间：</td>
+						<td><input type="text" value="1" size="10"/>秒钟</td>
+					</tr>
+					<tr>
+						<td>得分情况：</td>
+						<td id="score"></td>
+					</tr>
+					<tr>
+						<td><input type="button" name="" id="" value="开始游戏" onclick="run()"/></td>
+						<td><input type="button" name="" id="" value="停止游戏" onclick="stop()"/></td>
+					</tr>
+				</table>
+			</div>
+			
+			<div class="instructions">
+				<h3>游戏说明</h3>
+				<p>点击"开始游戏"按钮，在下图中随机生成老鼠，打中老鼠+100分，未打中-200分</p>
+			</div>
+			
+			<div class="statement">
+				<p>作者： Iaa</p>
+				<p>指导老师：???</p>
+			</div>
+			
+			<div class="gamerange">
+				<table>
+					<tr>
+						<td><img src="img/00.jpg"/></td>
+						<td><img src="img/00.jpg"/></td>
+						<td><img src="img/00.jpg"/></td>
+						<td><img src="img/00.jpg"/></td>
+						<td><img src="img/00.jpg"/></td>
+					</tr>
+					<tr>
+						<td><img src="img/00.jpg"/></td>
+						<td><img src="img/00.jpg"/></td>
+						<td><img src="img/00.jpg"/></td>
+						<td><img src="img/00.jpg"/></td>
+						<td><img src="img/00.jpg"/></td>
+					</tr>
+					<tr>
+						<td><img src="img/00.jpg"/></td>
+						<td><img src="img/00.jpg"/></td>
+						<td><img src="img/00.jpg"/></td>
+						<td><img src="img/00.jpg"/></td>
+						<td><img src="img/00.jpg"/></td>
+					</tr>
+					<tr>
+						<td><img src="img/00.jpg"/></td>
+						<td><img src="img/00.jpg"/></td>
+						<td><img src="img/00.jpg"/></td>
+						<td><img src="img/00.jpg"/></td>
+						<td><img src="img/00.jpg"/></td>
+					</tr>
+					<tr>
+						<td><img src="img/00.jpg"/></td>
+						<td><img src="img/00.jpg"/></td>
+						<td><img src="img/00.jpg"/></td>
+						<td><img src="img/00.jpg"/></td>
+						<td><img src="img/00.jpg"/></td>
+					</tr>
+				</table>
+			</div>
+			
+		</div>
+		
+		<script type="text/javascript">
+			
+		    var tdItem = document.querySelectorAll(".gamerange td")	;
+		    var i = 0;
+		    var k = 0;
+		    var timer = null;
+		    var stopTime = null;		    		   
+		    var tCountdown = document.getElementById("countdown");
+		    var tScore = document.getElementById("score");
+		    
+		    function star(){
+		    	var num = Math.random()*25;
+		    	var j = Math.floor(num);		    		    	
+		    	console.log(j);
+		    	tdItem[j].innerHTML = "<img src='img/01.jpg'/>";	
+		    	
+		    	function jth () {		    		
+		    		i += 100;
+		    		tdItem[j].innerHTML = "<img src='img/02.jpg'/>";
+		    		tScore.innerText = i + "分";
+		    		tdItem[j].removeEventListener("mousedown",jth,false);
+		    		console.log(99);
+		    		k = 1 ;
+		    	}
+		    	tdItem[j].addEventListener("mousedown",jth,false);
+		    	console.log(k);
+		    	setTimeout(function () {			    		
+		    		tdItem[j].removeEventListener("mousedown",jth,false);
+		    		console.log(88);
+		    		tdItem[j].innerHTML = "<img src='img/00.jpg'/>";
+		    		if (k == 0) {
+		    			i -=200;
+		    			tScore.innerText = i + "分";		    			
+		    		}k=0;
+		    	},1000);		    			    	
+		    }		    
+		    
+		    function run(){
+		    	stop();
+		    	oTime = document.getElementById("goTime").value*60;
+		    	stopTime = setInterval(satrtTime,1000);
+		    	timer = setInterval(star,1000);		    	
+		    }
+		    
+		    function stop(){
+		    	clearInterval(timer);
+		    	clearInterval(stopTime);
+		    }		    
+		    function satrtTime () {		    	
+		    	oTime--;
+		    	tCountdown.innerText = oTime + "秒";
+		    	if(oTime == 0){
+		    		alert("时间到!!!");
+		    		stop();
+		    	}
+		    }
+		    
+		</script>
+	</body>
+</html>
